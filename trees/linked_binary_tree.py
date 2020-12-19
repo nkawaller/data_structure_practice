@@ -1,3 +1,5 @@
+from abstract_base_binary_tree import BinaryTree
+
 class LinkedBinaryTree(BinaryTree):
 
     class _Node:
