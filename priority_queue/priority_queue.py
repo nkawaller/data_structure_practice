@@ -7,7 +7,7 @@ class PriorityQueueBase:
         self._key = k
         self._value = v
 
-    def __lt__(self, other):
+    def __It__(self, other):
         return self._key < other._key
 
     def is_empty(self):
