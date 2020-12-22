@@ -3,7 +3,7 @@ from abstract_priority_queue import PriorityQueueBase
 class Empty(Exception):
     pass
 
-
+# will need to import positional list for this to work
 class UnsortedPriorityQueue(PriorityQueueBase):
 
     def _find_min(self):
@@ -12,7 +12,7 @@ class UnsortedPriorityQueue(PriorityQueueBase):
         small = self._data.first()
         walk = self._data.after(small)
         while walk is not None:
-            if walk.element() < small.element()
+            if walk.element() < small.element():
                 small = walk
             walk = self._data.after(walk)
         return small
