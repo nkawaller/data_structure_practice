@@ -19,8 +19,19 @@ class LinkedList:
     def printList(self):
         temp = self.head
         while(temp):
-            print(temp.data)
+            print(temp.data, end='')
             temp = temp.next
+        print('\n')
+
+    def reverse(self):
+        prev = None
+        current = self.head
+        while(current is not None):
+            next = current.next
+            current.next = prev
+            prev = current
+            current = next
+        self.head = prev 
 
 # Driver code
 my_linked_list = LinkedList()
@@ -30,4 +41,6 @@ my_linked_list.push(3)
 my_linked_list.push(4)
 my_linked_list.push(5)
 
+my_linked_list.printList()
+my_linked_list.reverse()
 my_linked_list.printList()
