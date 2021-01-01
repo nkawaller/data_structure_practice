@@ -21,3 +21,13 @@ class LinkedList:
         while(temp):
             print(temp.data)
             temp = temp.next
+
+# Driver code
+my_linked_list = LinkedList()
+my_linked_list.push(1)
+my_linked_list.push(2)
+my_linked_list.push(3)
+my_linked_list.push(4)
+my_linked_list.push(5)
+
+my_linked_list.printList()
