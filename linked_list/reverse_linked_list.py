@@ -23,15 +23,21 @@ class LinkedList:
             temp = temp.next
         print('\n')
 
+    # def reverse(self):
+    #     prev = None
+    #     current = self.head
+    #     while(current is not None):
+    #         next = current.next
+    #         current.next = prev
+    #         prev = current
+    #         current = next
+    #     self.head = prev 
+
+    """ trying to figure this way out"""
     def reverse(self):
-        prev = None
-        current = self.head
-        while(current is not None):
-            next = current.next
-            current.next = prev
-            prev = current
-            current = next
-        self.head = prev 
+        prev, head = None, self.head
+        while head:
+            head.next, prev, head = prev, head, head.next
 
 # Driver code
 my_linked_list = LinkedList()
