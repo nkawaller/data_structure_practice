@@ -93,7 +93,7 @@ class LinkedBinaryTree(BinaryTree):
 
     def _delete(self, p):
         node = self._validate(p)
-        is self.num_children(p) == 2: raise ValueError('p has two children')
+        if self.num_children(p) == 2: raise ValueError('p has two children')
         child = node._left if node._left else node._right
         if child is not None:
             child._parent = node._parent
